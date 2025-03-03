@@ -16,13 +16,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(btnGp,&QButtonGroup::idClicked,ui->stackedWidget,&QStackedWidget::setCurrentIndex);
     btnGp->button(0)->setChecked(true);
     ui->stackedWidget->setCurrentIndex(0);
+    w=new Weather(this);
+    w->close();
     connect(ui->weather_1,&QToolButton::clicked,this,[=](){
-       w.show();
+       w->show();
     });
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete w;
 }
 

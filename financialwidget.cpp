@@ -47,7 +47,7 @@ void FinancialWidget::setupUI()
     mainLayout->addLayout(middleLayout, 60); // 占60%高度
     mainLayout->addWidget(chartView, 40); // 占40%高度
     // =============== 顶部筛选条件与按钮布局 ===============
-    topLayout->addWidget(new QLabel("学生姓名:", this));
+    topLayout->addWidget(new QLabel("职员姓名:", this));
     studentComboBox = new QComboBox(this);
     topLayout->addWidget(studentComboBox);
 
@@ -73,7 +73,7 @@ void FinancialWidget::setupUI()
     tableWidget->setFixedWidth(550);
     tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     tableWidget->setAlternatingRowColors(true);
-    QStringList header = QStringList() << "ID" << "学生名字" << "缴费日期" << "金额" << "支付类型" << "备注";
+    QStringList header = QStringList() << "ID" << "职员名字" << "缴费日期" << "金额" << "支付类型" << "备注";
     tableWidget->setColumnCount(header.count());
     tableWidget->setHorizontalHeaderLabels(header);
     tableWidget->setColumnHidden(0, true);
@@ -129,7 +129,7 @@ void FinancialWidget::loadFinancialRecords()
 void FinancialWidget::populateStudentComboBox()
 {
     studentComboBox->clear();
-    studentComboBox->addItem("所有学生", QVariant("-1")); // "-1" 表示所有学生
+    studentComboBox->addItem("所有职员", QVariant("-1")); // "-1" 表示所有学生
 
     QSqlQuery query("SELECT id, name FROM studentInfo");
     while (query.next()) {
@@ -159,7 +159,7 @@ void FinancialWidget::addRecord()
     QLineEdit* feeTypeEdit = new QLineEdit(&dialog);
     QLineEdit* remarkEdit = new QLineEdit(&dialog);
 
-    form.addRow("学生名称:", studentNameComboBox);
+    form.addRow("职员名称:", studentNameComboBox);
     form.addRow("缴费日期:", paymentDateEdit); // 修改为 QDateEdit
     form.addRow("金额:", amountEdit);
     form.addRow("支付类型:", feeTypeEdit);
@@ -346,7 +346,7 @@ void FinancialWidget::editRecord()
     QLineEdit* amountEdit = new QLineEdit(amount, &dialog);
     QLineEdit* feeTypeEdit = new QLineEdit(feeType, &dialog);
     QLineEdit* remarkEdit = new QLineEdit(remark, &dialog);
-    form.addRow("学生名称:", studentNameComboBox);
+    form.addRow("职员名称:", studentNameComboBox);
     form.addRow("缴费日期:", paymentDateEdit);
     form.addRow("金额:", amountEdit);
     form.addRow("支付类型:", feeTypeEdit);

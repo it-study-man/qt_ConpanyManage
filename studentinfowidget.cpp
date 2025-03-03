@@ -81,7 +81,7 @@ void StudentInfoWidget::refreshTable()
 void StudentInfoWidget::on_btnAdd_clicked()
 {
     QDialog dlg(this);
-    dlg.setWindowTitle(tr("添加学生信息"));
+    dlg.setWindowTitle(tr("添加职员信息"));
     dlg.setMinimumSize(600, 400);
     // 初始化对话框布局
     QVBoxLayout* mainLayout = new QVBoxLayout(&dlg);
@@ -145,8 +145,8 @@ QGroupBox *StudentInfoWidget::createFormGroup()
     formLayout->addRow(tr("性别："), genderCombo);
     formLayout->addRow(tr("出生日期："), birthdayEdit);
     formLayout->addRow(tr("入学日期："), joinDateEdit);
-    formLayout->addRow(tr("学习目标："), goalEdit);
-    formLayout->addRow(tr("当前进度："), progressCombo);
+    formLayout->addRow(tr("人生目标："), goalEdit);
+    formLayout->addRow(tr("工作进度："), progressCombo);
 
     return formGroup;
 
@@ -169,7 +169,7 @@ QGroupBox *StudentInfoWidget::createPhotoGroup()
     // 连接照片选择功能
     connect(btnSelectPhoto, &QPushButton::clicked, [this, lblPhotoPreview]() {
         QString fileName = QFileDialog::getOpenFileName(
-            this, tr("选择学生照片"),
+            this, tr("选择职员照片"),
             QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
             tr("图片文件 (*.png *.jpg *.jpeg)"));
         if (!fileName.isEmpty()) {
@@ -239,7 +239,7 @@ void StudentInfoWidget::handleDialogAccepted(QGroupBox *formGroup, QGroupBox *ph
     else {
         QSqlDatabase::database().commit();
         refreshTable();
-        QMessageBox::information(this, tr("成功"), tr("已成功添加学生：%1").arg(nameEdit->text()));
+        QMessageBox::information(this, tr("成功"), tr("已成功添加职员：%1").arg(nameEdit->text()));
     }
 
 }

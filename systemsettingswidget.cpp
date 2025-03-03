@@ -42,7 +42,7 @@ void SystemSettingsWidget::createUI()
     newPwdEdit->setEchoMode(QLineEdit::Password);
     confirmPwdEdit->setEchoMode(QLineEdit::Password);
 
-    versionInfoEdit->setPlainText("阿西拜教学管理系统 1.0\n 开发环境：QT C++ 6.6，Qt Creator 12.0.2，Win10");
+    versionInfoEdit->setPlainText("企业装备管理系统 1.0\n 开发环境：QT C++ 6.4.2 Qt Creator 12.0.2，Win11");
     versionInfoEdit->setReadOnly(true);
 
     mainLayout = new QGridLayout(this);

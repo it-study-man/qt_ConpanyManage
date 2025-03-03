@@ -54,9 +54,9 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1033, 600);
+        MainWindow->resize(1033, 614);
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/ico/le.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/ico/1_3.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
@@ -184,10 +184,10 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\351\230\277\350\245\277\346\213\234\346\225\231\345\255\246\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
-        btStudentInfo->setText(QCoreApplication::translate("MainWindow", "\345\255\246\345\221\230\344\277\241\346\201\257", nullptr));
-        btnSchedule->setText(QCoreApplication::translate("MainWindow", "\350\257\276\347\250\213\345\256\211\346\216\222", nullptr));
-        btnFinance->setText(QCoreApplication::translate("MainWindow", "\350\264\242\345\212\241", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\344\274\201\344\270\232\350\243\205\345\244\207\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
+        btStudentInfo->setText(QCoreApplication::translate("MainWindow", "\350\201\214\345\221\230\344\277\241\346\201\257", nullptr));
+        btnSchedule->setText(QCoreApplication::translate("MainWindow", "\345\267\245\344\275\234\345\256\211\346\216\222", nullptr));
+        btnFinance->setText(QCoreApplication::translate("MainWindow", "\350\264\242\345\212\241\350\256\260\345\275\225", nullptr));
         btnHonor->setText(QCoreApplication::translate("MainWindow", "\350\215\243\350\252\211\345\242\231", nullptr));
         btnSystemSetting->setText(QCoreApplication::translate("MainWindow", "\347\263\273\347\273\237\350\256\276\347\275\256", nullptr));
         weather_1->setText(QCoreApplication::translate("MainWindow", "\345\244\251\346\260\224\351\242\204\346\212\245", nullptr));

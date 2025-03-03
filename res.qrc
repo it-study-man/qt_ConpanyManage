@@ -68,5 +68,6 @@
         <file>res/search.png</file>
         <file>res/sunrise.png</file>
         <file>res/wind.png</file>
+        <file>ico/1_3.jpg</file>
     </qresource>
 </RCC>

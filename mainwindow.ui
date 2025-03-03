@@ -7,15 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>1033</width>
-    <height>600</height>
+    <height>614</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>阿西拜教学管理系统</string>
+   <string>企业装备管理系统</string>
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
-    <normaloff>:/ico/le.png</normaloff>:/ico/le.png</iconset>
+    <normaloff>:/ico/1_3.jpg</normaloff>:/ico/1_3.jpg</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -64,7 +64,7 @@
           </size>
          </property>
          <property name="text">
-          <string>学员信息</string>
+          <string>职员信息</string>
          </property>
          <property name="icon">
           <iconset resource="res.qrc">
@@ -93,7 +93,7 @@
           </size>
          </property>
          <property name="text">
-          <string>课程安排</string>
+          <string>工作安排</string>
          </property>
          <property name="icon">
           <iconset resource="res.qrc">
@@ -122,7 +122,7 @@
           </size>
          </property>
          <property name="text">
-          <string>财务</string>
+          <string>财务记录</string>
          </property>
          <property name="icon">
           <iconset resource="res.qrc">

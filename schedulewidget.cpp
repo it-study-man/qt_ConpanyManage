@@ -76,8 +76,8 @@ void ScheduleWidget::setupUI()
     tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     setupTable();
 
-    addButton = new QPushButton("添加课程", this);
-    deleteButton = new QPushButton("删除课程", this);
+    addButton = new QPushButton("添加工作安排", this);
+    deleteButton = new QPushButton("删除工作安排", this);
     addButton->setFixedWidth(200);
     deleteButton->setFixedWidth(200);
 
@@ -181,7 +181,7 @@ void ScheduleWidget::addCourse(){
         return;
     }
     QDialog dialog(this);// 创建自定义对话框
-    dialog.setWindowTitle("添加课程");
+    dialog.setWindowTitle("添加工作安排");
     QFormLayout layout(&dialog);
     QComboBox nameCombo;// 学生姓名下拉框
     QSqlQuery nameQuery("SELECT name FROM studentInfo");
@@ -194,8 +194,8 @@ void ScheduleWidget::addCourse(){
     QTimeEdit timeEdit;// 时间选择控件
     timeEdit.setDisplayFormat("HH:mm");
     timeEdit.setTime(timePresets.value(timeIndex)); // 设置列对应默认时间
-    layout.addRow("学生姓名:", &nameCombo);
-    layout.addRow("课程时间:", &timeEdit);
+    layout.addRow("职员姓名:", &nameCombo);
+    layout.addRow("工作时间:", &timeEdit);
     QDialogButtonBox buttons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     buttons.button(QDialogButtonBox::Ok)->setText("确定");
     buttons.button(QDialogButtonBox::Cancel)->setText("取消");
