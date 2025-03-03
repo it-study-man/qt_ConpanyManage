@@ -144,7 +144,7 @@ QGroupBox *StudentInfoWidget::createFormGroup()
     formLayout->addRow(tr("姓名："), nameEdit);
     formLayout->addRow(tr("性别："), genderCombo);
     formLayout->addRow(tr("出生日期："), birthdayEdit);
-    formLayout->addRow(tr("入学日期："), joinDateEdit);
+    formLayout->addRow(tr("入职日期："), joinDateEdit);
     formLayout->addRow(tr("人生目标："), goalEdit);
     formLayout->addRow(tr("工作进度："), progressCombo);
 
@@ -211,7 +211,7 @@ void StudentInfoWidget::handleDialogAccepted(QGroupBox *formGroup, QGroupBox *ph
     checkQuery.prepare("SELECT id FROM studentInfo WHERE id = ?");
     checkQuery.addBindValue(idEdit->text());
     if (checkQuery.exec() && checkQuery.next()) {
-        QMessageBox::warning(this, tr("错误"), tr("学号 %1 已存在！").arg(idEdit->text()));
+        QMessageBox::warning(this, tr("错误"), tr("编号 %1 已存在！").arg(idEdit->text()));
         return;
     }
     // 插入数据

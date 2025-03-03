@@ -16,7 +16,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    Weather *w;
+    Weather w;
 private:
     Ui::MainWindow *ui;
 };

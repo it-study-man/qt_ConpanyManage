@@ -16,16 +16,19 @@ MainWindow::MainWindow(QWidget *parent)
     connect(btnGp,&QButtonGroup::idClicked,ui->stackedWidget,&QStackedWidget::setCurrentIndex);
     btnGp->button(0)->setChecked(true);
     ui->stackedWidget->setCurrentIndex(0);
-    w=new Weather(this);
-    w->close();
     connect(ui->weather_1,&QToolButton::clicked,this,[=](){
-       w->show();
+       w.setStyleSheet("background-color: rgb(0, 98, 144);"
+                        "QPushButton{"
+                        "background-color: rgb(0, 0, 0);"
+                        "color: rgb(255, 255, 255);"
+                        "border: 2px solid black; /* 设置 2 像素宽的白色实线边框 */"
+                        "}");
+       w.show();
     });
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete w;
 }
 

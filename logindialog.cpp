@@ -15,8 +15,8 @@ LoginDialog::LoginDialog(QWidget *parent)
 {
     ui->setupUi(this);
     checkAndCreateInitialUser(); // 检查数据库是否为空，若为空则插入初始用户
-    setWindowTitle("阿西拜教学管理系统");    // 设置窗口标题
-    setWindowIcon(QIcon(":/ico/le.png"));
+    setWindowTitle("企业装备管理系统");    // 设置窗口标题
+    setWindowIcon(QIcon(":/ico/1_3.jpg"));
     setFixedSize(260, 180);
     // 创建控件
     QLabel* usernameLabel = new QLabel("用户名:", this);
