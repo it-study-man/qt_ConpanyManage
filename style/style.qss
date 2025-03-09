@@ -9,6 +9,7 @@ QWidget {
 /* 主窗口背景 */
 QMainWindow {
     background-color: #424242;
+
 }
 
 /* 按钮样式 */
